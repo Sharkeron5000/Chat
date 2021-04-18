@@ -1,0 +1,55 @@
+.chatWindow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+ul.chat {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 500px;
+  height: 500px;
+  border: 1px solid grey;
+  padding-inline-start: 0px;
+  overflow: auto;
+}
+li.friendMessage {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+  width: 300px;
+}
+li.check {
+  border: 1px solid greenyellow;
+}
+li.nocheck {
+  border: 1px solid skyblue;
+}
+li.yourMessage{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 10px 190px;
+  width: 300px;
+}
+.yourMessage > p {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 5px 10px;
+}
+.yourMessage p.name {
+  margin: 10px 20px;
+}
+.friendMessage p.name {
+  margin: 10px 20px;
+}
+.friendMessage p.message {
+  margin: 10px;
+}
+div.message {
+  display: flex;
+  justify-content: flex-end;
+}
+div.message input {
+  flex-grow: 1;
+}
