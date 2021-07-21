@@ -8,9 +8,19 @@ const addMessage = (event) => {
   if (event.code === 'Enter' || event.type === 'click') {
     const lengthLi = document.querySelectorAll('.chat li');
     const message = document.getElementById('message').value;
-  
-    const messageTemplate = `<li id="${lengthLi.length}" class="yourMessage">
-    <p class="name">Я</p>
+    const user = document.getElementById('selectUser').options.selectedIndex;
+    let classMessage = '';
+    let nick = '';
+    if (user) {
+      classMessage = "friendMessage";
+      nick = "Друг"
+    } else {
+      classMessage = "yourMessage";
+      nick = "Я"
+    }
+    
+    const messageTemplate = `<li id="${lengthLi.length}" class=${classMessage}>
+    <p class="name">${nick}</p>
     <p class="message">${message}</p>
     </li>`;
   
